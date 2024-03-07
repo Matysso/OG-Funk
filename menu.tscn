@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dphdt2aoyeo3h"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_iyfr3"]
+[ext_resource type="Texture2D" uid="uid://ynm32oyadd37" path="res://assets/UI/UI_Flat_Banner_01_Downward.png" id="2_vq2cu"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 287.0
+offset_right = 49.0
+offset_bottom = 327.0
+script = ExtResource("1_iyfr3")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+offset_right = 108.0
+offset_bottom = 128.0
+
+[node name="StartButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "
+"
+icon = ExtResource("2_vq2cu")
+flat = true
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+icon = ExtResource("2_vq2cu")
+flat = true
+
+[node name="QuitButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+icon = ExtResource("2_vq2cu")
+flat = true
+
+[connection signal="pressed" from="VBoxContainer2/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]
