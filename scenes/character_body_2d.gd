@@ -14,13 +14,19 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
-	if (velocity.x < -1 and velocity.x < 0):
-		sprite_2d.animation = "left"
-	elif (velocity.x == 0):
-		sprite_2d.animation ="default"
-	elif velocity.x>0  : 
-		sprite_2d.animation = "right"
 		
+		
+	if (velocity.x < -1 and velocity.x < 0 and is_on_floor()):
+		sprite_2d.animation = "left"
+	elif (velocity.x == 0 and is_on_floor()):
+		sprite_2d.animation ="default"
+	elif velocity.x>0 and is_on_floor(): 
+		sprite_2d.animation = "right"
+	elif not is_on_floor() and velocity.x>0 or velocity.x==0:
+		sprite_2d.animation = "jump"
+	elif not is_on_floor() and velocity.x < -1 and velocity.x < 0 :
+		sprite_2d.animation = "jump2"
+	 
 	
 		
 	# Get the input direction and handle the movement/deceleration.
@@ -31,7 +37,9 @@ func _physics_process(delta):
 		velocity.x = horizontal_direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, 30)
-
+		sprite_2d.animation = "transition"
+		if (velocity.x == 0 and is_on_floor()):
+			sprite_2d.animation ="default"
 		
 		
 

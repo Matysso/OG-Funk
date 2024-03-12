@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnww1pmf0s0n1"
-path="res://.godot/imported/courtois.png-bd61dd96d94da85adcf64c03bcde5dbd.ctex"
+uid="uid://022tcm6tlcea"
+path="res://.godot/imported/_Idle.png-deb1449d21174c046ad099c2c8cfdaa3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character/courtois.png"
-dest_files=["res://.godot/imported/courtois.png-bd61dd96d94da85adcf64c03bcde5dbd.ctex"]
+source_file="res://character/Colour1/Outline/120x80_PNGSheets/_Idle.png"
+dest_files=["res://.godot/imported/_Idle.png-deb1449d21174c046ad099c2c8cfdaa3.ctex"]
 
 [params]
 
