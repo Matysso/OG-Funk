@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://csg61fmfdcph3"]
+[gd_scene load_steps=14 format=3 uid="uid://csg61fmfdcph3"]
 
+[ext_resource type="Texture2D" uid="uid://dcp4l38arckae" path="res://background/background.png" id="1_e7vch"]
 [ext_resource type="Texture2D" uid="uid://cemy7frkrusek" path="res://background/mountains.png" id="1_onx4v"]
 [ext_resource type="PackedScene" uid="uid://dmx4dl274k5v2" path="res://scenes/character_body_2d.tscn" id="2_rdfw6"]
 [ext_resource type="Texture2D" uid="uid://c8c7ftqeh150k" path="res://assets/objects.png" id="3_7872i"]
+[ext_resource type="Texture2D" uid="uid://cfvxxdiur14vg" path="res://background/graveyard.png" id="3_f5mjn"]
 [ext_resource type="Texture2D" uid="uid://ckt6nsbr5oeum" path="res://assets/tileset-sliced.png" id="4_hneks"]
 [ext_resource type="Texture2D" uid="uid://30wlqgk0peiu" path="res://assets/tileset.png" id="5_i22v8"]
 [ext_resource type="Texture2D" uid="uid://4ad3o4hgdfhu" path="res://assets/deco/TopDownHouse_FloorsAndWalls.png" id="6_qqhb7"]
@@ -1905,6 +1907,12 @@ sources/3 = SubResource("TileSetAtlasSource_06om0")
 
 [node name="Node2D" type="Node2D"]
 
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1923.0
+offset_bottom = 1080.0
+texture = ExtResource("1_e7vch")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
@@ -1915,6 +1923,13 @@ offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_onx4v")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+offset_top = 545.0
+offset_right = 1919.0
+offset_bottom = 1080.0
+texture = ExtResource("3_f5mjn")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_rdfw6")]
 position = Vector2(165, 888)
