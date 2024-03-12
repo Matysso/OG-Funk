@@ -327,7 +327,7 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_poxuq")
 animation = &"transition"
 autoplay = "default"
-frame_progress = 0.922184
+frame_progress = 0.872427
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

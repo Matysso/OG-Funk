@@ -37,9 +37,7 @@ func _physics_process(delta):
 		velocity.x = horizontal_direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, 30)
-		sprite_2d.animation = "transition"
-		if (velocity.x == 0 and is_on_floor()):
-			sprite_2d.animation ="default"
+
 		
 		
 
